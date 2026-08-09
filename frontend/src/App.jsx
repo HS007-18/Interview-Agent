@@ -28,8 +28,28 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>AI Interviewer</h1>
-        {candidate && <button className="header-reset" onClick={handleReset}>Back to Candidates</button>}
+        <div className="header-brand">
+          <div className="brand-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <line x1="9" y1="9" x2="15" y2="9"></line>
+              <line x1="9" y1="13" x2="13" y2="13"></line>
+            </svg>
+          </div>
+          <h1>AI Technical Interviewer</h1>
+          <span className="header-badge">Hackathon Edition</span>
+        </div>
+
+        <div className="header-actions">
+          {candidate && (
+            <button className="header-reset" onClick={handleReset}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              Back to Candidates
+            </button>
+          )}
+        </div>
       </header>
       
       <main className="app-main">
